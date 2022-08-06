@@ -35,10 +35,8 @@ const bart = [
 ]
 
 
-let bartTip = 0
-
 for (calc of bart) {
-   bartTip += calc.bill * .2
+   calc.tip = calc.bill * .2
 }
 
-console.log(bartTip)
+console.log(bart)
