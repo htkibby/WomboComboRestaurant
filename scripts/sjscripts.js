@@ -57,5 +57,5 @@ let pepperTip = 0;
 for (calc of pepper) {
     pepperTip += calc.bill * 2;
 }
-
 console.log(pepperTip);
+
