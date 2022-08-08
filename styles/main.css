@@ -7,11 +7,15 @@
    color: white
 }
 
-.subhead {
+.waiterStatus {
    display: flex;
    flex-wrap: nowrap;
    justify-content: space-between;
-   flex-direction: row
+   flex-direction: row;
+}
+
+.waiterTitle{
+   text-align: center;
 }
 
 .table{
