@@ -35,10 +35,29 @@ const bart = [
 ]
 
 
-let bartTip = 0
-
 for (calc of bart) {
-   bartTip += calc.bill * .2
+   calc.tip = calc.bill * .2
 }
 
-console.log(bartTip)
+let htmlWaiter = 'Bart Tables<ul>'
+for (const waiter of bart) {
+   console.log(waiter)
+   if (waiter.occupied === true && waiter.needsBooster === true) {
+      htmlWaiter += `<li><b>Table</b> ${waiter.table}</<li>`
+      htmlWaiter += `<li>drinks: ${waiter.drinks}</<li>`
+      htmlWaiter += `<li>food: ${waiter.food}</<li>`
+      htmlWaiter += `<li><b>Table Needs a Booster Seat!</b></<li>`
+      htmlWaiter += `<li>occupancy: ${waiter.occupancy}</<li><br></br>`
+   } else if (waiter.occupied === true) {
+      htmlWaiter += `<li><b>Table</b> ${waiter.table}</<li>`
+      htmlWaiter += `<li>drinks: ${waiter.drinks}</<li>`
+      htmlWaiter += `<li>food: ${waiter.food}</<li>`
+      htmlWaiter += `<li>occupancy: ${waiter.occupancy}</<li><br></br>`
+   }
+}
+htmlWaiter += '</ul>'
+
+document.getElementById('waitertk').innerHTML = htmlWaiter
+document.getElementById('waitersj').innerHTML = htmlWaiter
+document.getElementById('waiterec').innerHTML = htmlWaiter
+document.getElementById('waiteryogi').innerHTML = htmlWaiter
