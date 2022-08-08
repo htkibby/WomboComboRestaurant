@@ -1,0 +1,20 @@
+.head{
+   text-align: center;
+   display: flex;
+   background-color: #1d2951 ;
+   justify-content: center;
+   border-radius: 40px;
+   color: white
+}
+
+.subhead {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   flex-direction: row
+}
+
+.table{
+   border: 1px black solid;
+   border-radius: 10px;
+}
