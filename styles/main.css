@@ -22,3 +22,17 @@
    border: 1px black solid;
    border-radius: 10px;
 }
+
+.empty {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   flex-direction: row;
+}
+
+.tableEmpty{
+   border: 1px black solid;
+   border-radius: 10px;
+   background-color: red;
+   color: white;
+}
