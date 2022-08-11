@@ -52,13 +52,13 @@ let sumBill = 0
 bart.forEach(element => {
    sumBill += element.bill;
 })
-htmlCalc += `Bartholomew has earned Big Brother Restaurant $${sumBill}`
+htmlCalc += `<p>Bartholomew has earned Big Brother Restaurant <b>$${sumBill}</b>.`
 
 let sumTip = 0
 bart.forEach(element => {
    sumTip += element.bill *.2;
 })
-htmlCalc += `Bartholomew has earned Big Brother Restaurant $${sumTip}`
+htmlCalc += `<p>Bartholomew has earned <b>$${sumTip}</b> in tips.</p>`
 
 for (calc of bart) {
    calc.tip = calc.bill * .2
@@ -68,7 +68,7 @@ for (calc of bart) {
 let htmlWaiter = '<p class="waiterTitle">Bart Tables</p><ul>';
 let htmlEmpty = ``;
 for (const waiter of bart) {
-   console.log(waiter)
+   // console.log(waiter)
    if (waiter.occupied === true && waiter.needsBooster === true) {
       htmlWaiter += `<li><b>Table</b> ${waiter.table}</li>`
       htmlWaiter += `<li>Drinks: ${waiter.drinks}</li>`
@@ -92,7 +92,7 @@ for (const waiter of bart) {
    }
 }
 htmlWaiter += '</ul>'
-htmlEmpty += ``
+// htmlEmpty += ``
 
 document.getElementById('waitertk').innerHTML = htmlWaiter
 document.getElementById('waitersj').innerHTML = htmlWaiter
@@ -104,4 +104,7 @@ document.getElementById('emptyTables2').innerHTML = htmlEmpty
 document.getElementById('emptyTables3').innerHTML = htmlEmpty
 document.getElementById('emptyTables4').innerHTML = htmlEmpty
 
-document.getElementById('totals').innerHTML = htmlCalc
+document.getElementById('totals1').innerHTML = htmlCalc
+document.getElementById('totals2').innerHTML = htmlCalc
+document.getElementById('totals3').innerHTML = htmlCalc
+document.getElementById('totals4').innerHTML = htmlCalc
