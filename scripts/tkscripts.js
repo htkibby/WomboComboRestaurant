@@ -96,15 +96,16 @@ htmlWaiter += '</ul>'
 
 document.getElementById('waitertk').innerHTML = htmlWaiter
 //document.getElementById('waitersj').innerHTML = htmlWaiter
-document.getElementById('waiterec').innerHTML = htmlWaiter
+//document.getElementById('waiterec').innerHTML = htmlWaiter
 document.getElementById('waiteryogi').innerHTML = htmlWaiter
 
 document.getElementById('emptyTables1').innerHTML = htmlEmpty
-document.getElementById('emptyTables2').innerHTML = htmlEmpty
+//document.getElementById('emptyTables2').innerHTML = htmlEmpty
 //document.getElementById('emptyTables3').innerHTML = htmlEmpty
 document.getElementById('emptyTables4').innerHTML = htmlEmpty
 
 document.getElementById('totals1').innerHTML = htmlCalc
-document.getElementById('totals2').innerHTML = htmlCalc
+//document.getElementById('totals2').innerHTML = htmlCalc
 //document.getElementById('totals3').innerHTML = htmlCalc
+
 document.getElementById('totals4').innerHTML = htmlCalc
