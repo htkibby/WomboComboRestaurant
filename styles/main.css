@@ -4,35 +4,77 @@
    background-color: #1d2951 ;
    justify-content: center;
    border-radius: 40px;
-   color: white
+   color: white;
 }
 
-.subhead {
+.waiterStatus {
    display: flex;
    flex-wrap: nowrap;
    justify-content: space-between;
-   flex-direction: row;
+   flex-direction: row;  
+}
+
+
+
+.waiterTitle{
+   text-align: center;
+   font-size: larger;
 }
 
 .table{
    border: 1px black solid;
    border-radius: 10px;
-   padding: 10px;
-   
+   margin: 2px;
+   background-color: white;
+   transition: all .2s ease-in
 }
-.dirtyTableEC {
+
+.table:hover{
+   transform: scale(1.2)
+}
+
+.empty {
    display: flex;
    flex-wrap: nowrap;
    justify-content: space-between;
    flex-direction: row;
-   list-style: none;
-   
 }
 
-.tableDirtyEC{
+.tableEmpty{
    border: 1px black solid;
    border-radius: 10px;
+   background-color: red;
+   color: white;
+   margin: 2px;
+   padding-left: 10px;
+   transition: all .2s ease-in
+}
+
+.tableEmpty:hover{
+   transform: scale(1.12)
+}
+
+.waiterTotal{
+   border: 1px black solid;
+   border-radius: 10px;
+   background-color: green;
+   color: white;
+   margin: 2px;
    padding: 10px;
-   text-align: center;
-   list-style: none;
+   transition: all .2s ease-in
+}
+
+.waiterTotal:hover{
+   transform: scale(1.2)
+}
+
+.totalStatus {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   flex-direction: row;
+}
+
+.totalBoxes{
+   font-size: large;
 }

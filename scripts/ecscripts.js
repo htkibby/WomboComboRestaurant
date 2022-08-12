@@ -38,27 +38,27 @@ const james = [
 
 let htmlCalcEC = ``
 
-let sumBill = 0
+let sumBillEC = 0
 james.forEach(element => {
-    sumBill += element.bill;
+    sumBillEC += element.bill;
 })
     
  //Ignore these lines of code
 //for (parent of james)
 //{if (typeof parent.bill === Number) { 
    // parent.forEach(element => {
-   // sumBill += element.bill;
+   // sumBillEC += element.bill;
   //  })
 //} else if (typeof parent.bill === String) {
     // ...
 //}}
-htmlCalcEC += `<p>James has earned Big Brother Restaurant <b>$${sumBill}</br></p>`
+htmlCalcEC += `<p>James has earned Big Brother Restaurant <b>$${sumBillEC}</br></p>`
 
-let sumTip = 0
+let sumTipEc = 0
 james.forEach(element => {
-    sumTip  += element.bill * .2;
+    sumTipEc  += element.bill * .2;
 })
-htmlCalcEC += `<p>James has earned <b>$${sumTip}</b> for that vaycay fund!</p>`
+htmlCalcEC += `<p>James has earned <b>$${sumTipEc}</b> for that vaycay fund!</p>`
 
 for (calc of james) {
      calc.tip += calc.bill * .2
@@ -91,13 +91,9 @@ for (const waiter of james) {
   htmlWaiterEC += '</ul>'
   htmlEmptyEC += '</ul>'
   
-
-  document.getElementById('waitertk').innerHTML = htmlWaiterEC
-  document.getElementById('waitersj').innerHTML = htmlWaiterEC
   document.getElementById('waiterec').innerHTML = htmlWaiterEC
-  document.getElementById('waiteryogi').innerHTML = htmlWaiterEC
-
-  document.getElementById('waiterCleanEc').innerHTML =htmlEmptyEC
-  document.getElementById('ecTotalTips').innerHTML = htmlCalcEC
+  
+  document.getElementById('emptyTables2').innerHTML =htmlEmptyEC
+  document.getElementById('totals2').innerHTML = htmlCalcEC
 
   
