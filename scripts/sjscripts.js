@@ -49,32 +49,61 @@ const pepper = [
             "Medium-Well Rib-eye Steak and Grilled Shrimp",
             "Well-Done Rib-eye Steak and Potatoe",
         ],
-        occupied: true,
-        occupancy: 2,
-        needsBooster: true,
+        occupied: false,
+        occupancy: 0,
+        needsBooster: false,
         bill: 159,
         tip: "",
     },
 ];
 //console.log(pepper);
 
-let htmlWaiter = "Pepper Tables<ul>";
+let htmlCalcPepper = ``
+
+let sumBillPepper = 0
+pepper.forEach(element => {
+    sumBillPepper += element.bill;
+})
+htmlCalcPepper += `<p>pepperholomew has earned Big Brother Restaurant <b>$${sumBillPepper}</b>.`
+
+let sumTipPepper = 0
+pepper.forEach(element => {
+    sumTipPepper += element.bill * .2;
+})
+htmlCalcPepper += `<p>pepperholomew has earned <b>$${sumTipPepper}</b> in tips.</p>`
+
+for (calc of pepper) {
+    calc.tip = calc.bill * .2
+    //    htmlCalcPepper += `pepperholomew has an estimated $${calc.tip} in tips for the night.`
+}
+
+
+let htmlWaiterPepper = "Pepper Tables<ul>";
+let htmlEmptyPepper = ``;
 for (const waiter of pepper) {
     console.log(waiter)
     if (waiter.occupied === true && waiter.needsBooster === true) {
-        htmlWaiter += `<li><b>Table</b> ${waiter.table}</<li>`;
-        htmlWaiter += `<li>drinks: ${waiter.drinks}</<li>`;
-        htmlWaiter += `<li>food: ${waiter.food}</<li>`;
-        htmlWaiter += `<li><b>Table Needs a Booster Seat!</b></<li>`;
-        htmlWaiter += `<li>occupancy: ${waiter.occupancy}</<li><br></br>`;
+        htmlWaiterPepper += `<li><b>Table</b> ${waiter.table}</<li>`;
+        htmlWaiterPepper += `<li>drinks: ${waiter.drinks}</<li>`;
+        htmlWaiterPepper += `<li>food: ${waiter.food}</<li>`;
+        htmlWaiterPepper += `<li><b>Table Needs a Booster Seat!</b></<li>`;
+        htmlWaiterPepper += `<li>occupancy: ${waiter.occupancy}</<li><br></br>`;
     } else if (waiter.occupied === true) {
-        htmlWaiter += `<li><b>Table</b> ${waiter.table}</<li>`;
-        htmlWaiter += `<li>drinks: ${waiter.drinks}</<li>`;
-        htmlWaiter += `<li>food: ${waiter.food}</<li>`;
-        htmlWaiter += `<li>occupancy: ${waiter.occupancy}</<li><br></br>`;
+        htmlWaiterPepper += `<li><b>Table</b> ${waiter.table}</<li>`;
+        htmlWaiterPepper += `<li>drinks: ${waiter.drinks}</<li>`;
+        htmlWaiterPepper += `<li>food: ${waiter.food}</<li>`;
+        htmlWaiterPepper += `<li>occupancy: ${waiter.occupancy}</<li><br></br>`;
+    } else if (waiter.bill === 0) {
+        htmlEmptyPepper += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
+        htmlEmptyPepper += `<p><b>NEVER SERVE THIS GROUP OF PEOPLE AGAIN CAUSE THEY DID NOT PAY ME - SINCERELY pepperHOLOMEW</b></p><br></br>`
+    } else {
+        htmlEmptyPepper += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
+        htmlEmptyPepper += `<ul><li>Final Bill $${waiter.bill}</li>`
+        htmlEmptyPepper += `<li>Final Tip $${calc.tip}</li></ul><br></br>`
     }
 }
-htmlWaiter += "</ul>";
+
+htmlWaiterPepper += "</ul>";
 /*for (const boosterSeat of pepper) {
     if (boosterSeat === boosterSeat.needsBooster === true)
         console.log(boosterSeat.needsBooster)
@@ -84,8 +113,13 @@ for (calc of pepper) {
     pepperTip += calc.bill * 2;
     console.log(pepperTip);
 }
+document.getElementById('waitersj').innerHTML = htmlWaiterPepper
+document.getElementById('emptyTables3').innerHTML = htmlEmptyPepper
+document.getElementById('totals3').innerHTML = htmlCalcPepper
+
+
+
 
 /*document.getElementById('waitertk').innerHTML = htmlWaiter
-document.getElementById('waitersj').innerHTML = htmlWaiter
 document.getElementById('waiterec').innerHTML = htmlWaiter
 document.getElementById('waiteryogi').innerHTML = htmlWaiter*/
