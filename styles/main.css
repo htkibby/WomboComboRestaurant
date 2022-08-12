@@ -65,7 +65,7 @@
 }
 
 .waiterTotal:hover{
-   transform: scale(1.2)
+   transform: scale(1.12)
 }
 
 .totalStatus {
@@ -77,4 +77,5 @@
 
 .totalBoxes{
    font-size: large;
+   text-align: center;
 }

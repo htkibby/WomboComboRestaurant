@@ -30,7 +30,7 @@ const james = [
         occupancy: 0,
         needsBooster: true,
         occupied: false,
-        bill: 0,
+        bill: 155,
         tip:""
     }
 ]
@@ -65,26 +65,27 @@ for (calc of james) {
 } 
 
 
-let htmlEmptyEC = '<p> Needs to be Cleared </p> <ul>'
-let htmlWaiterEC = '<p>James Tables</p> <ul>'
+let htmlEmptyEC = ''
+let htmlWaiterEC = '<p class="waiterTitle">James Tables</p> <ul>'
 for (const waiter of james) {
     console.log(waiter)
     if (waiter.occupied === true && waiter.needsBooster === true) {
         htmlWaiterEC += `<li><b>Table</b> ${waiter.table}</li>`
         htmlWaiterEC += `<li>Drink: ${waiter.drinks}</li>`
         htmlWaiterEC += `<li>Food: ${waiter.food}</li>`
+        htmlWaiterEC += `<li>Bill: $${waiter.bill}</li>`
         htmlWaiterEC += `<li><b>Table Needs a Booster Seat!</b></li>`
         htmlWaiterEC += `<li>Occupancy: ${waiter.occupancy}</li><br></br>`
      } else if (waiter.occupied === true) {
         htmlWaiterEC += `<li><b>Table</b> ${waiter.table}</li>`
         htmlWaiterEC += `<li>Drinks: ${waiter.drinks}</li>`
         htmlWaiterEC += `<li>Food: ${waiter.food}</li>`
+        htmlWaiterEC += `<li>Bill: $${waiter.bill}</li>`
         htmlWaiterEC += `<li>Occupancy: ${waiter.occupancy}</li><br></br>`
-     } else {
-         htmlEmptyEC += `<p class= "waiterClean"> <b> Table ${waiter.table}</b> </p>`
-         htmlEmptyEC += `<ul><li>Bill: ${waiter.bill}</li>`
-         htmlEmptyEC += `<li> Clean Me!</li>`
-        
+    } else {
+        htmlEmptyEC += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
+        htmlEmptyEC += `<ul><li>Final Bill $${waiter.bill}</li>`
+        htmlEmptyEC += `<li>Final Tip $${calc.tip}</li></ul><br></br>`
      }
     
   }
@@ -92,7 +93,6 @@ for (const waiter of james) {
   htmlEmptyEC += '</ul>'
   
   document.getElementById('waiterec').innerHTML = htmlWaiterEC
-  
   document.getElementById('emptyTables2').innerHTML =htmlEmptyEC
   document.getElementById('totals2').innerHTML = htmlCalcEC
 
