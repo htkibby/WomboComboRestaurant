@@ -14,8 +14,6 @@
    flex-direction: row;  
 }
 
-
-
 .waiterTitle{
    text-align: center;
    font-size: larger;
@@ -26,7 +24,8 @@
    border-radius: 10px;
    margin: 2px;
    background-color: white;
-   transition: all .2s ease-in
+   transition: all .2s ease-in;
+   width: 32%;
 }
 
 .table:hover{
@@ -47,7 +46,8 @@
    color: white;
    margin: 2px;
    padding-left: 10px;
-   transition: all .2s ease-in
+   transition: all .2s ease-in;
+   width: 32%;
 }
 
 .tableEmpty:hover{
