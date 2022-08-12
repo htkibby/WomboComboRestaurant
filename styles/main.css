@@ -11,10 +11,28 @@
    display: flex;
    flex-wrap: nowrap;
    justify-content: space-between;
-   flex-direction: row
+   flex-direction: row;
 }
 
 .table{
    border: 1px black solid;
    border-radius: 10px;
+   padding: 10px;
+   
+}
+.dirtyTableEC {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   flex-direction: row;
+   list-style: none;
+   
+}
+
+.tableDirtyEC{
+   border: 1px black solid;
+   border-radius: 10px;
+   padding: 10px;
+   text-align: center;
+   list-style: none;
 }
