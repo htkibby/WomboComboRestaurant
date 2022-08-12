@@ -56,13 +56,13 @@ htmlCalc += `<p>Bartholomew has earned Big Brother Restaurant <b>$${sumBill}</b>
 
 let sumTip = 0
 bart.forEach(element => {
-   sumTip += element.bill *.2;
+   sumTip += element.bill * .2;
 })
 htmlCalc += `<p>Bartholomew has earned <b>$${sumTip}</b> in tips.</p>`
 
 for (calc of bart) {
    calc.tip = calc.bill * .2
-//    htmlCalc += `Bartholomew has an estimated $${calc.tip} in tips for the night.`
+   //    htmlCalc += `Bartholomew has an estimated $${calc.tip} in tips for the night.`
 }
 
 let htmlWaiter = '<p class="waiterTitle">Bart Tables</p><ul>';
@@ -82,7 +82,7 @@ for (const waiter of bart) {
       htmlWaiter += `<li>Food: ${waiter.food}</li>`
       htmlWaiter += `<li>Bill: $${waiter.bill}</li>`
       htmlWaiter += `<li>Occupancy: ${waiter.occupancy}</<li><br></br>`
-   } else if (waiter.bill === 0) { 
+   } else if (waiter.bill === 0) {
       htmlEmpty += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
       htmlEmpty += `<p><b>NEVER SERVE THIS GROUP OF PEOPLE AGAIN CAUSE THEY DID NOT PAY ME - SINCERELY BARTHOLOMEW</b></p><br></br>`
    } else {
@@ -95,16 +95,17 @@ htmlWaiter += '</ul>'
 // htmlEmpty += ``
 
 document.getElementById('waitertk').innerHTML = htmlWaiter
-document.getElementById('waitersj').innerHTML = htmlWaiter
+//document.getElementById('waitersj').innerHTML = htmlWaiter
 //document.getElementById('waiterec').innerHTML = htmlWaiter
 document.getElementById('waiteryogi').innerHTML = htmlWaiter
 
 document.getElementById('emptyTables1').innerHTML = htmlEmpty
 //document.getElementById('emptyTables2').innerHTML = htmlEmpty
-document.getElementById('emptyTables3').innerHTML = htmlEmpty
+//document.getElementById('emptyTables3').innerHTML = htmlEmpty
 document.getElementById('emptyTables4').innerHTML = htmlEmpty
 
 document.getElementById('totals1').innerHTML = htmlCalc
 //document.getElementById('totals2').innerHTML = htmlCalc
-document.getElementById('totals3').innerHTML = htmlCalc
+//document.getElementById('totals3').innerHTML = htmlCalc
+
 document.getElementById('totals4').innerHTML = htmlCalc
