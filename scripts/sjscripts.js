@@ -1,7 +1,7 @@
 const pepper = [
     {
         id: 1,
-        table: 003,
+        table: 503,
         drinks: ["Crown and Coke", " Royle Flush", " Margarita Pitcher "],
         food: [
             " Chicken and Rice",
@@ -19,7 +19,7 @@ const pepper = [
 
     {
         id: 2,
-        table: 004,
+        table: 504,
         drinks: ["Lemonade", "Texas Tea", "Sweet Tea", "Lemonade Tea"],
         food: ["Chicken Strips", "Mac-n-Cheese", "Surf-n-Turf", "Pie"],
         occupied: true,
@@ -31,7 +31,7 @@ const pepper = [
 
     {
         id: 3,
-        table: 005,
+        table: 505,
         drinks: ["Sprite", "Coke", "Orange Soda"],
         food: ["Peperoni Pizza"],
         occupied: true,
@@ -43,7 +43,7 @@ const pepper = [
 
     {
         id: 4,
-        table: 006,
+        table: 506,
         drinks: ["Red Wine", "White Wine"],
         food: [
             "Medium-Well Rib-eye Steak and Grilled Shrimp",
@@ -64,13 +64,13 @@ let sumBillPepper = 0
 pepper.forEach(element => {
     sumBillPepper += element.bill;
 })
-htmlCalcPepper += `<p>pepperholomew has earned Big Brother Restaurant <b>$${sumBillPepper}</b>.`
+htmlCalcPepper += `<p>Pepper has earned Big Brother Restaurant <b>$${sumBillPepper}</b>.`
 
 let sumTipPepper = 0
 pepper.forEach(element => {
     sumTipPepper += element.bill * .2;
 })
-htmlCalcPepper += `<p>pepperholomew has earned <b>$${sumTipPepper}</b> in tips.</p>`
+htmlCalcPepper += `<p>Pepper has earned <b>$${sumTipPepper}</b> in tips.</p>`
 
 for (calc of pepper) {
     calc.tip = calc.bill * .2
@@ -78,7 +78,7 @@ for (calc of pepper) {
 }
 
 
-let htmlWaiterPepper = "Pepper Tables<ul>";
+let htmlWaiterPepper = '<p class="waiterTitle">Pepper Tables</p><ul>';
 let htmlEmptyPepper = ``;
 for (const waiter of pepper) {
     console.log(waiter)
