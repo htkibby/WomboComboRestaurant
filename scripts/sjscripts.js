@@ -86,12 +86,14 @@ for (const waiter of pepper) {
         htmlWaiterPepper += `<li><b>Table</b> ${waiter.table}</<li>`;
         htmlWaiterPepper += `<li>drinks: ${waiter.drinks}</<li>`;
         htmlWaiterPepper += `<li>food: ${waiter.food}</<li>`;
+        htmlWaiterPepper += `<li>Bill: $${waiter.bill}</li>`;
         htmlWaiterPepper += `<li><b>Table Needs a Booster Seat!</b></<li>`;
         htmlWaiterPepper += `<li>occupancy: ${waiter.occupancy}</<li><br></br>`;
     } else if (waiter.occupied === true) {
         htmlWaiterPepper += `<li><b>Table</b> ${waiter.table}</<li>`;
         htmlWaiterPepper += `<li>drinks: ${waiter.drinks}</<li>`;
         htmlWaiterPepper += `<li>food: ${waiter.food}</<li>`;
+        htmlWaiterPepper += `<li>Bill: $${waiter.bill}</li>`;
         htmlWaiterPepper += `<li>occupancy: ${waiter.occupancy}</<li><br></br>`;
     } else if (waiter.bill === 0) {
         htmlEmptyPepper += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
