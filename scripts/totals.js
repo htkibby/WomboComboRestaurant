@@ -7,7 +7,8 @@ const totals = [
       occupancy: 5,
       needsBooster: true,
       bill: 300,
-      tip:""
+      tip:"",
+      occupied: true
   },
   {
       id: 2,
@@ -17,7 +18,8 @@ const totals = [
       occupancy: 3,
       needsBooster: false,
       bill: 125,
-      tip:""  
+      tip:"",
+      occupied: true  
   },
   {
       id: 3,
@@ -27,7 +29,8 @@ const totals = [
       occupancy: 4,
       needsBooster: true,
       bill: 155,
-      tip:""
+      tip:"",
+      occupied: true
   },
   {
    id: 4,
@@ -44,6 +47,7 @@ const totals = [
    needsBooster: true,
    bill: 159,
    tip: "",
+   occupied: true
 },
 {
    id: 5,
@@ -54,6 +58,7 @@ const totals = [
    needsBooster: true,
    bill: 159,
    tip: "",
+   occupied: true,
 },
 {
    id: 6,
@@ -64,6 +69,7 @@ const totals = [
    needsBooster: false,
    bill: 340,
    tip: "",
+   occupied: true
 },
 {
    id: 7,
@@ -77,6 +83,7 @@ const totals = [
    needsBooster: true,
    bill: 159,
    tip: "",
+   occupied: true
 },
 {
    id: 8,
@@ -126,31 +133,34 @@ const totals = [
    id: 12,
    table: 201,
    drinks:["water","soda","beer"],
-   foodItems:["vegetable rice","green chicken","noodle soup"],
+   food:["vegetable rice","green chicken","noodle soup"],
    occupancy: 6,
-   boosterSeat: true,
+   needsBooster: true,
    bill: 510,
-   tip:""
+   tip:"",
+   occupied: true
 },
 {
    id: 13,
    table: 202,
    drinks:["cold water","pepsi"],
-   foodItems:[" mix vegetable ","spicy chicken"," white soup"],
+   food:[" mix vegetable ","spicy chicken"," white soup"],
    occupancy: 6,
-   boosterSeat: true,
+   needsBooster: true,
    bill: 370,
-   tip:""
+   tip:"",
+   occupied: true
 },
 {
    id: 14,
    table: 203,
    drinks:["water","coke","orange drink"],
-   foodItems:["noodles","steak","pizza"],
+   food:["noodles","steak","pizza"],
    occupancy: 4,
-   boosterSeat: false,
+   needsBooster: false,
    bill: 510,
-   tip:""
+   tip:"",
+   occupied: true
 }
 ]
 
