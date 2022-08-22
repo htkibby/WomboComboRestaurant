@@ -48,69 +48,75 @@ import  {tableData, waiterData, waiterMatch} from '../scripts/data.js'
 
 // ]
 
-const bart = waiterMatch(1)
+const thomasWaiterPage = () => {
 
-console.log(bart)
+   
+   const bart = waiterMatch(1)
 
-let htmlCalc = ``
-
-let sumBill = 0
-bart.forEach(element => {
-   sumBill += element.bill;
-})
-htmlCalc += `<p>Bartholomew has earned Big Brother Restaurant <b>$${sumBill}</b>.`
-
-let sumTip = 0
-bart.forEach(element => {
-   sumTip += element.bill * .2;
-})
-htmlCalc += `<p>Bartholomew has earned <b>$${sumTip}</b> in tips.</p>`
-
-for (calc of bart) {
-   calc.tip = calc.bill * .2
-   //    htmlCalc += `Bartholomew has an estimated $${calc.tip} in tips for the night.`
-}
-
-let htmlWaiter = '<p class="waiterTitle">Bartholomew Tables</p><ul>';
-let htmlEmpty = ``;
-for (const waiter of bart) {
-   // console.log(waiter)
-   if (waiter.occupied === true && waiter.needsBooster === true) {
-      htmlWaiter += `<li><b>Table</b> ${waiter.table}</li>`
-      htmlWaiter += `<li>Drinks: ${waiter.drinks}</li>`
-      htmlWaiter += `<li>Food: ${waiter.food}</li>`
-      htmlWaiter += `<li>Bill: $${waiter.bill}</li>`
-      htmlWaiter += `<li><b>TABLE NEEDS A BOOSTER SEAT!</b></li>`
-      htmlWaiter += `<li>Occupancy: ${waiter.occupancy}</li><br></br>`
-   } else if (waiter.occupied === true) {
-      htmlWaiter += `<li><b>Table</b> ${waiter.table}</li>`
-      htmlWaiter += `<li>Drinks: ${waiter.drinks}</li>`
-      htmlWaiter += `<li>Food: ${waiter.food}</li>`
-      htmlWaiter += `<li>Bill: $${waiter.bill}</li>`
-      htmlWaiter += `<li>Occupancy: ${waiter.occupancy}</<li><br></br>`
-   } else if (waiter.bill === 0) {
-      htmlEmpty += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
-      htmlEmpty += `<p><b>NEVER SERVE THIS GROUP OF PEOPLE AGAIN CAUSE THEY DID NOT PAY ME - SINCERELY BARTHOLOMEW</b></p><br></br>`
-   } else {
-      htmlEmpty += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
-      htmlEmpty += `<ul><li>Final Bill $${waiter.bill}</li>`
-      htmlEmpty += `<li>Final Tip $${calc.tip}</li></ul><br></br>`
+   console.log(bart)
+   
+   let htmlCalc = ``
+   
+   let sumBill = 0
+   bart.forEach(element => {
+      sumBill += element.bill;
+   })
+   htmlCalc += `<p>Bartholomew has earned Big Brother Restaurant <b>$${sumBill}</b>.`
+   
+   let sumTip = 0
+   bart.forEach(element => {
+      sumTip += element.bill * .2;
+   })
+   htmlCalc += `<p>Bartholomew has earned <b>$${sumTip}</b> in tips.</p>`
+   
+   for (let calc of bart) {
+      calc.tip = calc.bill * .2
+      //    htmlCalc += `Bartholomew has an estimated $${calc.tip} in tips for the night.`
    }
-}
-htmlWaiter += '</ul>'
+   
+   let htmlWaiter = '<p class="waiterTitle">Bartholomew Tables</p><ul>';
+   let htmlEmpty = ``;
+   for (const waiter of bart) {
+      // console.log(waiter)
+      if (waiter.occupied === true && waiter.needsBooster === true) {
+         htmlWaiter += `<li><b>Table</b> ${waiter.table}</li>`
+         htmlWaiter += `<li>Drinks: ${waiter.drinks}</li>`
+         htmlWaiter += `<li>Food: ${waiter.food}</li>`
+         htmlWaiter += `<li>Bill: $${waiter.bill}</li>`
+         htmlWaiter += `<li><b>TABLE NEEDS A BOOSTER SEAT!</b></li>`
+         htmlWaiter += `<li>Occupancy: ${waiter.occupancy}</li><br></br>`
+      } else if (waiter.occupied === true) {
+         htmlWaiter += `<li><b>Table</b> ${waiter.table}</li>`
+         htmlWaiter += `<li>Drinks: ${waiter.drinks}</li>`
+         htmlWaiter += `<li>Food: ${waiter.food}</li>`
+         htmlWaiter += `<li>Bill: $${waiter.bill}</li>`
+         htmlWaiter += `<li>Occupancy: ${waiter.occupancy}</<li><br></br>`
+      } else if (waiter.bill === 0) {
+         htmlEmpty += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
+         htmlEmpty += `<p><b>NEVER SERVE THIS GROUP OF PEOPLE AGAIN CAUSE THEY DID NOT PAY ME - SINCERELY BARTHOLOMEW</b></p><br></br>`
+      } else {
+         htmlEmpty += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
+         htmlEmpty += `<ul><li>Final Bill $${waiter.bill}</li>`
+         htmlEmpty += `<li>Final Tip $${calc.tip}</li></ul><br></br>`
+      }
+   }
+   htmlWaiter += '</ul>'
 // htmlEmpty += ``
 
-document.getElementById('waitertk').innerHTML = htmlWaiter
+   document.getElementById('waitertk').innerHTML = htmlWaiter
 //document.getElementById('waitersj').innerHTML = htmlWaiter
 //document.getElementById('waiterec').innerHTML = htmlWaiter
 // document.getElementById('waiteryogi').innerHTML = htmlWaiter
 
-document.getElementById('emptyTables1').innerHTML = htmlEmpty
+   document.getElementById('emptyTables1').innerHTML = htmlEmpty
 //document.getElementById('emptyTables2').innerHTML = htmlEmpty
 //document.getElementById('emptyTables3').innerHTML = htmlEmpty
 // document.getElementById('emptyTables4').innerHTML = htmlEmpty
 
-document.getElementById('totals1').innerHTML = htmlCalc
+   document.getElementById('totals1').innerHTML = htmlCalc
 //document.getElementById('totals2').innerHTML = htmlCalc
 //document.getElementById('totals3').innerHTML = htmlCalc
 // document.getElementById('totals4').innerHTML = htmlCalc
+}
+
+thomasWaiterPage()

@@ -198,7 +198,7 @@ const waiterData = [
 ]
 
 const waiterMatch = (match) => {
-   for (assign of waiterData) {
+   for (let assign of waiterData) {
       if (match === 1){
          return tableData.filter(assign => assign.waiterId === 1);
       } else if (match === 2){

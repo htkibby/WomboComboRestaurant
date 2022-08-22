@@ -1,62 +1,66 @@
-const pepper = [
-    {
-        id: 1,
-        table: 503,
-        drinks: ["Crown and Coke", " Royle Flush", " Margarita Pitcher "],
-        food: [
-            " Chicken and Rice",
-            "Rib-Tips",
-            "Sampler- Platter",
-            "Veggies",
-            "Meatloaf",
-        ],
-        occupied: true,
-        occupancy: 5,
-        needsBooster: true,
-        bill: 159,
-        tip: "",
-    },
+import  {tableData, waiterData, waiterMatch} from '../scripts/data.js'
 
-    {
-        id: 2,
-        table: 504,
-        drinks: ["Lemonade", "Texas Tea", "Sweet Tea", "Lemonade Tea"],
-        food: ["Chicken Strips", "Mac-n-Cheese", "Surf-n-Turf", "Pie"],
-        occupied: true,
-        occupancy: 4,
-        needsBooster: true,
-        bill: 159,
-        tip: "",
-    },
+// const pepper = [
+//     {
+//         id: 1,
+//         table: 503,
+//         drinks: ["Crown and Coke", " Royle Flush", " Margarita Pitcher "],
+//         food: [
+//             " Chicken and Rice",
+//             "Rib-Tips",
+//             "Sampler- Platter",
+//             "Veggies",
+//             "Meatloaf",
+//         ],
+//         occupied: true,
+//         occupancy: 5,
+//         needsBooster: true,
+//         bill: 159,
+//         tip: "",
+//     },
 
-    {
-        id: 3,
-        table: 505,
-        drinks: ["Sprite", "Coke", "Orange Soda"],
-        food: ["Peperoni Pizza"],
-        occupied: true,
-        occupancy: 4,
-        needsBooster: false,
-        bill: 340,
-        tip: "",
-    },
+//     {
+//         id: 2,
+//         table: 504,
+//         drinks: ["Lemonade", "Texas Tea", "Sweet Tea", "Lemonade Tea"],
+//         food: ["Chicken Strips", "Mac-n-Cheese", "Surf-n-Turf", "Pie"],
+//         occupied: true,
+//         occupancy: 4,
+//         needsBooster: true,
+//         bill: 159,
+//         tip: "",
+//     },
 
-    {
-        id: 4,
-        table: 506,
-        drinks: ["Red Wine", "White Wine"],
-        food: [
-            "Medium-Well Rib-eye Steak and Grilled Shrimp",
-            "Well-Done Rib-eye Steak and Potatoe",
-        ],
-        occupied: false,
-        occupancy: 0,
-        needsBooster: false,
-        bill: 159,
-        tip: "",
-    },
-];
+//     {
+//         id: 3,
+//         table: 505,
+//         drinks: ["Sprite", "Coke", "Orange Soda"],
+//         food: ["Peperoni Pizza"],
+//         occupied: true,
+//         occupancy: 4,
+//         needsBooster: false,
+//         bill: 340,
+//         tip: "",
+//     },
+
+//     {
+//         id: 4,
+//         table: 506,
+//         drinks: ["Red Wine", "White Wine"],
+//         food: [
+//             "Medium-Well Rib-eye Steak and Grilled Shrimp",
+//             "Well-Done Rib-eye Steak and Potatoe",
+//         ],
+//         occupied: false,
+//         occupancy: 0,
+//         needsBooster: false,
+//         bill: 159,
+//         tip: "",
+//     },
+// ];
 //console.log(pepper);
+
+const pepper = waiterMatch(3)
 
 let htmlCalcPepper = ``
 
@@ -72,7 +76,7 @@ pepper.forEach(element => {
 })
 htmlCalcPepper += `<p>Pepper has earned <b>$${sumTipPepper}</b> in tips.</p>`
 
-for (calc of pepper) {
+for (let calc of pepper) {
     calc.tip = calc.bill * .2
     //    htmlCalcPepper += `pepperholomew has an estimated $${calc.tip} in tips for the night.`
 }
