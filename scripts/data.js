@@ -1,5 +1,6 @@
-
-const totals = [
+import{tableData, waiterData,waitermatch}from waiterMatch, Data.js
+const fabina= waitermatch(4);
+const tableData = [
     {
        id: 1,
        table: 708,
@@ -9,7 +10,8 @@ const totals = [
        needsBooster: true,
        bill: 300,
        tip:"",
-       occupied: true
+       occupied: true,
+       waiterId: 2
    },
    {
        id: 2,
@@ -20,7 +22,8 @@ const totals = [
        needsBooster: false,
        bill: 125,
        tip:"",
-       occupied: true  
+       occupied: true,
+       waiterId: 2  
    },
    {
        id: 3,
@@ -31,7 +34,8 @@ const totals = [
        needsBooster: true,
        bill: 155,
        tip:"",
-       occupied: true
+       occupied: true,
+       waiterId: 2
    },
    {
     id: 4,
@@ -48,7 +52,8 @@ const totals = [
     needsBooster: true,
     bill: 159,
     tip: "",
-    occupied: true
+    occupied: true,
+    waiterId: 3
  },
  {
     id: 5,
@@ -60,6 +65,7 @@ const totals = [
     bill: 159,
     tip: "",
     occupied: true,
+    waiterId: 3
  },
  {
     id: 6,
@@ -70,7 +76,8 @@ const totals = [
     needsBooster: false,
     bill: 340,
     tip: "",
-    occupied: true
+    occupied: true,
+   waiterId: 3
  },
  {
     id: 7,
@@ -84,7 +91,8 @@ const totals = [
     needsBooster: true,
     bill: 159,
     tip: "",
-    occupied: true
+    occupied: true,
+    waiterId: 3
  },
  {
     id: 8,
@@ -95,7 +103,8 @@ const totals = [
     needsBooster: false,
     bill: 460,
     tip: '',
-    occupied: true
+    occupied: true,
+    waiterId: 3
  },
  {
     id: 9,
@@ -106,7 +115,8 @@ const totals = [
     needsBooster: true,
     bill: 265,
     tip: '',
-    occupied: true
+    occupied: true,
+    waiterId: 1
  },
  {
     id: 10,
@@ -117,7 +127,8 @@ const totals = [
     needsBooster: false,
     bill: 0,
     tip: '',
-    occupied: false
+    occupied: false,
+    waiterId: 1
  },
  {
     id: 11,
@@ -128,7 +139,8 @@ const totals = [
     needsBooster: false,
     bill: 590,
     tip: '',
-    occupied: false
+    occupied: false,
+    waiterId: 1
  },
  {
     id: 12,
@@ -139,7 +151,8 @@ const totals = [
     needsBooster: true,
     bill: 510,
     tip:"",
-    occupied: true
+    occupied: true,
+    waiterId: 4
  },
  {
     id: 13,
@@ -150,7 +163,8 @@ const totals = [
     needsBooster: true,
     bill: 370,
     tip:"",
-    occupied: true
+    occupied: true,
+    waiterId: 4
  },
  {
     id: 14,
@@ -161,6 +175,69 @@ const totals = [
     needsBooster: false,
     bill: 510,
     tip:"",
-    occupied: true
+    occupied: true,
+    waiterId: 4
  }
  ]
+
+ const waiterData = [
+{
+   id:4,
+   waiterName: 'fabina',
+},
+
+{
+
+   id:1,
+   waiterName: 'bart',
+},
+
+{
+
+   id:3,
+   waiterName: 'pepper',
+
+
+   id:2,
+   waiterName: 'james',
+
+}
+
+]
+
+const waiterMatch =(match) => {
+   for (let assign of waiterData) {
+
+      if(match===1){
+         return tableData.filter(assign => assign.waiterId === 1);
+         
+      }
+      else if(match === 2){
+
+         return tableData.filter(assign => assign.waiterId === 2);
+      }
+   
+     else if(match === 3){
+
+         return tableData.filter(assign =>assign.waiterId===3);
+
+      }
+      else if(match==4){
+
+         return tableData.filter(assign =>assign.waiterId===4);
+      }
+
+
+   }
+}
+export= {tableData, waiterData, waiterMatch},
+console.log(waiterMatch(4))
+
+
+
+
+
+
+
+
+

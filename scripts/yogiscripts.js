@@ -1,4 +1,4 @@
- const fabina =[
+const fabina =[
 {
    id:1,
    table: 201,
