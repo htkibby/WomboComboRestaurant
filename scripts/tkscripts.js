@@ -69,23 +69,26 @@ const thomasWaiterPage = () => {
    })
    htmlCalc += `<p>Bartholomew has earned <b>$${sumTip}</b> in tips.</p>`
    
+   // const calc = bart.forEach(element => {
+   //    element.tip = element.bill * .2
+   // })
+   
    for (let calc of bart) {
       calc.tip = calc.bill * .2
-      //    htmlCalc += `Bartholomew has an estimated $${calc.tip} in tips for the night.`
    }
    
    let htmlWaiter = '<p class="waiterTitle">Bartholomew Tables</p><ul>';
    let htmlEmpty = ``;
+   
    for (const waiter of bart) {
-      // console.log(waiter)
-      if (waiter.occupied === true && waiter.needsBooster === true) {
+      if (waiter.occupied && waiter.needsBooster) {
          htmlWaiter += `<li><b>Table</b> ${waiter.table}</li>`
          htmlWaiter += `<li>Drinks: ${waiter.drinks}</li>`
          htmlWaiter += `<li>Food: ${waiter.food}</li>`
          htmlWaiter += `<li>Bill: $${waiter.bill}</li>`
          htmlWaiter += `<li><b>TABLE NEEDS A BOOSTER SEAT!</b></li>`
          htmlWaiter += `<li>Occupancy: ${waiter.occupancy}</li><br></br>`
-      } else if (waiter.occupied === true) {
+      } else if (waiter.occupied) {
          htmlWaiter += `<li><b>Table</b> ${waiter.table}</li>`
          htmlWaiter += `<li>Drinks: ${waiter.drinks}</li>`
          htmlWaiter += `<li>Food: ${waiter.food}</li>`
@@ -97,26 +100,20 @@ const thomasWaiterPage = () => {
       } else {
          htmlEmpty += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
          htmlEmpty += `<ul><li>Final Bill $${waiter.bill}</li>`
-         htmlEmpty += `<li>Final Tip $${calc.tip}</li></ul><br></br>`
+         htmlEmpty += `<li>Final Tip $${waiter.tip}</li></ul><br></br>`
       }
    }
    htmlWaiter += '</ul>'
-// htmlEmpty += ``
+
 
    document.getElementById('waitertk').innerHTML = htmlWaiter
-//document.getElementById('waitersj').innerHTML = htmlWaiter
-//document.getElementById('waiterec').innerHTML = htmlWaiter
-// document.getElementById('waiteryogi').innerHTML = htmlWaiter
+
 
    document.getElementById('emptyTables1').innerHTML = htmlEmpty
-//document.getElementById('emptyTables2').innerHTML = htmlEmpty
-//document.getElementById('emptyTables3').innerHTML = htmlEmpty
-// document.getElementById('emptyTables4').innerHTML = htmlEmpty
+
 
    document.getElementById('totals1').innerHTML = htmlCalc
-//document.getElementById('totals2').innerHTML = htmlCalc
-//document.getElementById('totals3').innerHTML = htmlCalc
-// document.getElementById('totals4').innerHTML = htmlCalc
+
 }
 
 thomasWaiterPage()

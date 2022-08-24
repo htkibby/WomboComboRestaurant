@@ -2,8 +2,8 @@ const tableData = [
    {
       id: 1,
       table: 708,
-      food: ["Pizza", "Pasta", "Soup", "Hamburger", "Cake"],
-      drinks: ["Beer", "wine", "water", "coke", "milk"],
+      food: ["Pizza", " Pasta", " Soup", " Hamburger", " Cake"],
+      drinks: ["Beer", " wine", " water", " coke", " milk"],
       occupancy: 5,
       needsBooster: true,
       bill: 300,
@@ -14,7 +14,7 @@ const tableData = [
    {
       id: 2,
       table: 709,
-      food: ["Cheese plate", "fruit", "tacos"],
+      food: ["Cheese plate", " fruit", " tacos"],
       drinks: ["water"],
       occupancy: 3,
       needsBooster: false,
@@ -26,25 +26,25 @@ const tableData = [
    {
       id: 3,
       table: 710,
-      food: ["salad", "burrito", "the special", "steak"],
-      drinks: ["hot toddy","mule","beer"],
+      food: ["salad", " burrito", " the special", " steak"],
+      drinks: ["hot toddy"," mule"," beer"],
       occupancy: 4,
       needsBooster: true,
       bill: 155,
       tip:"",
-      occupied: true,
+      occupied: false,
       waiterId: 2
    },
    {
       id: 4,
       table: 3,
-      drinks: ["Crown and Coke", "Royle Flush", "Margarita Pitcher "],
+      drinks: [" Crown and Coke", " Royle Flush", " Margarita Pitcher "],
       food: [
          "Chicken and Rice",
-         "Rib-Tips",
-         "Sampler- Platter",
-         "Veggies",
-         "Meatloaf",
+         " Rib-Tips",
+         " Sampler- Platter",
+         " Veggies",
+         " Meatloaf",
       ],
       occupancy: 5,
       needsBooster: true,
@@ -56,8 +56,8 @@ const tableData = [
    {
       id: 5,
       table: 4,
-      drinks: ["Lemonade", "Texas Tea", "Sweet Tea", "Lemonade Tea"],
-      food: ["Chicken Strips", "Mac-n-Cheese", "Surf-n-Turf", "Pie"],
+      drinks: ["Lemonade", " Texas Tea", " Sweet Tea", " Lemonade Tea"],
+      food: ["Chicken Strips", " Mac-n-Cheese", " Surf-n-Turf", " Pie"],
       occupancy: 4,
       needsBooster: true,
       bill: 159,
@@ -68,7 +68,7 @@ const tableData = [
    {
       id: 6,
       table: 5,
-      drinks: ["Sprite", "Coke", "Orange Soda"],
+      drinks: ["Sprite", " Coke", " Orange Soda"],
       food: ["Peperoni Pizza"],
       occupancy: 4,
       needsBooster: false,
@@ -80,16 +80,16 @@ const tableData = [
    {
       id: 7,
       table: 6,
-      drinks: ["Red Wine", "White Wine"],
+      drinks: ["Red Wine", " White Wine"],
       food: [
          "Medium-Well Rib-eye Steak and Grilled Shrimp",
-         "Well-Done Rib-eye Steak and Potatoe",
+         " Well-Done Rib-eye Steak and Potatoes",
       ],
       occupancy: 2,
       needsBooster: true,
       bill: 159,
       tip: "",
-      occupied: true,
+      occupied: false,
       waiterId: 3
    },
    {
@@ -143,8 +143,8 @@ const tableData = [
    {
       id: 12,
       table: 201,
-      drinks:["water","soda","beer"],
-      food:["vegetable rice","green chicken","noodle soup"],
+      drinks:["water"," soda"," beer"],
+      food:["vegetable rice"," green chicken"," noodle soup"],
       occupancy: 6,
       needsBooster: true,
       bill: 510,
@@ -155,8 +155,8 @@ const tableData = [
    {
       id: 13,
       table: 202,
-      drinks:["cold water","pepsi"],
-      food:[" mix vegetable ","spicy chicken"," white soup"],
+      drinks:["cold water"," pepsi"],
+      food:[" mix vegetable"," spicy chicken"," white soup"],
       occupancy: 6,
       needsBooster: true,
       bill: 370,
@@ -167,13 +167,13 @@ const tableData = [
    {
       id: 14,
       table: 203,
-      drinks:["water","coke","orange drink"],
-      food:["noodles","steak","pizza"],
+      drinks:["water"," coke"," orange drink"],
+      food:["noodles"," steak"," pizza"],
       occupancy: 4,
       needsBooster: false,
       bill: 510,
       tip:"",
-      occupied: true,
+      occupied: false,
       waiterId: 4
    }
 ]
@@ -198,16 +198,8 @@ const waiterData = [
 ]
 
 const waiterMatch = (match) => {
-   for (let assign of waiterData) {
-      if (match === 1){
-         return tableData.filter(assign => assign.waiterId === 1);
-      } else if (match === 2){
-         return tableData.filter(assign => assign.waiterId === 2);
-      } else if (match === 3){
-         return tableData.filter(assign => assign.waiterId === 3);
-      } else if (match === 4){
-         return tableData.filter(assign => assign.waiterId === 4);
-      }
+   for (let assign of tableData) {
+       return tableData.filter(assign => assign.waiterId === match)
    }
 }
 

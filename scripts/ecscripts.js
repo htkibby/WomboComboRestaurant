@@ -73,14 +73,14 @@ const ericaWaiterPage = () =>{
     let htmlWaiterEC = '<p class="waiterTitle">James Tables</p> <ul>'
     for (const waiter of james) {
         console.log(waiter)
-        if (waiter.occupied === true && waiter.needsBooster === true) {
+        if (waiter.occupied && waiter.needsBooster) {
             htmlWaiterEC += `<li><b>Table</b> ${waiter.table}</li>`
             htmlWaiterEC += `<li>Drink: ${waiter.drinks}</li>`
             htmlWaiterEC += `<li>Food: ${waiter.food}</li>`
             htmlWaiterEC += `<li>Bill: $${waiter.bill}</li>`
             htmlWaiterEC += `<li><b>Table Needs a Booster Seat!</b></li>`
             htmlWaiterEC += `<li>Occupancy: ${waiter.occupancy}</li><br></br>`
-        } else if (waiter.occupied === true) {
+        } else if (waiter.occupied) {
             htmlWaiterEC += `<li><b>Table</b> ${waiter.table}</li>`
             htmlWaiterEC += `<li>Drinks: ${waiter.drinks}</li>`
             htmlWaiterEC += `<li>Food: ${waiter.food}</li>`
@@ -89,7 +89,7 @@ const ericaWaiterPage = () =>{
         } else {
             htmlEmptyEC += `<p class="waiterTitle"><b>Table ${waiter.table}</b></p>`
             htmlEmptyEC += `<ul><li>Final Bill $${waiter.bill}</li>`
-            htmlEmptyEC += `<li>Final Tip $${calc.tip}</li></ul><br></br>`
+            htmlEmptyEC += `<li>Final Tip $${waiter.tip}</li></ul><br></br>`
         }
         
     }
