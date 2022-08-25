@@ -1,5 +1,12 @@
-import{tableData, waiterData,waiterMatch} from '../scripts/data.js'
-const fabina = waiterMatch(4);
+import{getTableData,getWaiterData} from '../scripts/data.js'
+console.log(getTableData());
+console.log(getWaiterData());
+
+const tableData = getTableData();
+const waiterData =getWaiterData();
+
+const fabina = tableData.filter(x => x.waiterId === 4);
+console.log(fabina);
 
 
 
@@ -50,6 +57,9 @@ for (const waiterFabina of fabina) {
    }
 }
 htmlWaiterFabina += '</ul>'
+console.log(htmlWaiterFabina);
+console.log(htmlEmptyFabina);
+console.log(htmlcalcFabina);
 
 document.getElementById('waiteryogi').innerHTML=htmlWaiterFabina
 document.getElementById('emptyTables4').innerHTML=htmlEmptyFabina

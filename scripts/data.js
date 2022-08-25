@@ -236,9 +236,9 @@ const waiterMatch =(match) => {
     const copyOfTableData = tableData.map(data => ({...data}))
     return copyOfTableData
   }
- export const getJournalEntries = () => {
-    const copyOfEntries = journalEntries.map(entry => ({...entry}))
-    return copyOfEntries
+ export const getWaiterData = () => {
+    const copyOfWaiterData = waiterData.map(data => ({...data}))
+    return copyOfWaiterData
   }
 
 
