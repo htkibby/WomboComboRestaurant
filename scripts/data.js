@@ -1,5 +1,4 @@
-import{tableData, waiterData,waitermatch}from waiterMatch, Data.js
-const fabina= waitermatch(4);
+
 const tableData = [
     {
        id: 1,
@@ -33,13 +32,13 @@ const tableData = [
        occupancy: 4,
        needsBooster: true,
        bill: 155,
-       tip:"",
+       tip:"" ,
        occupied: true,
        waiterId: 2
    },
    {
     id: 4,
-    table: 003,
+    table: 3,
     drinks: ["Crown and Coke", "Royle Flush", "Margarita Pitcher "],
     food: [
         "Chicken and Rice",
@@ -57,7 +56,7 @@ const tableData = [
  },
  {
     id: 5,
-    table: 004,
+    table: 4,
     drinks: ["Lemonade", "Texas Tea", "Sweet Tea", "Lemonade Tea"],
     food: ["Chicken Strips", "Mac-n-Cheese", "Surf-n-Turf", "Pie"],
     occupancy: 4,
@@ -69,7 +68,7 @@ const tableData = [
  },
  {
     id: 6,
-    table: 005,
+    table: 5,
     drinks: ["Sprite", "Coke", "Orange Soda"],
     food: ["Peperoni Pizza"],
     occupancy: 4,
@@ -81,7 +80,7 @@ const tableData = [
  },
  {
     id: 7,
-    table: 006,
+    table: 6,
     drinks: ["Red Wine", "White Wine"],
     food: [
         "Medium-Well Rib-eye Steak and Grilled Shrimp",
@@ -230,8 +229,18 @@ const waiterMatch =(match) => {
 
    }
 }
-export= {tableData, waiterData, waiterMatch},
-console.log(waiterMatch(4))
+//export {tableData, waiterData, waiterMatch}
+//console.log(waiterMatch(4))
+
+ export const getTableData = () => {
+    const copyOfTableData = tableData.map(data => ({...data}))
+    return copyOfTableData
+  }
+ export const getJournalEntries = () => {
+    const copyOfEntries = journalEntries.map(entry => ({...entry}))
+    return copyOfEntries
+  }
+
 
 
 

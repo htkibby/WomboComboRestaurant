@@ -1,49 +1,8 @@
-const fabina =[
-{
-   id:1,
-   table: 201,
-   occupied:true,
-   drinks:["water"," soda"," beer"],
-   food:["vegetable rice"," green chicken"," noodle soup"],
-   occupancy: 6,
-   needsBooster: true,
-   bill: 510,
-   tip:""
-},
-{
-   id:2,
-   table: 202,
-   occupied: true,
-   drinks:[" cold water"," pepsi"],
-   food:["mix vegetables"," spicy chicken"," white soup"],
-   occupancy: 6,
-   needsBooster: true,
-   bill: 370,
-   tip:""
-},
-{
-   id:3,
-   table: 203,
-   occupied: false,
-   drinks:["water"," coke"," orange drink"],
-   food:[" noodles"," steak"," pizza"],
-   occupancy: 0,
-   needsBooster: false,
-   bill: 510,
-   tip:""
-},
-{
-   id:4,
-   table: 204,
-   occupied: true,
-   drinks:[" lemonade"," coke"," fruit juice"],
-   food:[" noodles"," steak"," pizza"],
-   occupancy: 3,
-   needsBooster: true,
-   bill: 650,
-   tip:""
-}
-]
+import{tableData, waiterData,waiterMatch} from '../scripts/data.js'
+const fabina = waiterMatch(4);
+
+
+
 
 let htmlcalcFabina = ``
 
@@ -59,7 +18,7 @@ fabina.forEach(element => {
 })
 htmlcalcFabina += `<p>Fabina has earned <b>$${sumTipFabina}</b> in tips.</p>`
 
-for (calcFabina of fabina) {
+for (let calcFabina of fabina) {
    calcFabina.tip = calcFabina.bill * .2
 //    htmlCalc += `Bartholomew has an estimated $${calc.tip} in tips for the night.`
 }
