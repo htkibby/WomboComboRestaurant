@@ -1,9 +1,12 @@
 import{getTableData,getWaiterData} from '../scripts/data.js'
 console.log(getTableData());
 console.log(getWaiterData());
+const fabinaWaiterPage =() =>{
+
 
 const tableData = getTableData();
 const waiterData =getWaiterData();
+
 
 const fabina = tableData.filter(x => x.waiterId === 4);
 console.log(fabina);
@@ -53,7 +56,7 @@ for (const waiterFabina of fabina) {
    } else {
       htmlEmptyFabina += `<p class="waiterTitle"><b>Table ${waiterFabina.table}</b></p>`
       htmlEmptyFabina += `<ul><li>Final Bill $${waiterFabina.bill}</li>`
-      htmlEmptyFabina += `<li>Final Tip $${calcFabina.tip}</li></ul><br></br>`
+      htmlEmptyFabina += `<li>Final Tip $${waiterFabina.tip}</li></ul><br></br>`
    }
 }
 htmlWaiterFabina += '</ul>'
@@ -65,3 +68,5 @@ document.getElementById('waiteryogi').innerHTML=htmlWaiterFabina
 document.getElementById('emptyTables4').innerHTML=htmlEmptyFabina
 document.getElementById('totals4').innerHTML=htmlcalcFabina
 
+}
+fabinaWaiterPage()

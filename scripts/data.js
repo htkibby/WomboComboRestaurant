@@ -174,7 +174,7 @@ const tableData = [
     needsBooster: false,
     bill: 510,
     tip:"",
-    occupied: true,
+    occupied: false,
     waiterId: 4
  }
  ]
