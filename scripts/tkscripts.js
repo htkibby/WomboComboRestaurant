@@ -1,53 +1,5 @@
 import  {tableData, waiterData, waiterMatch} from '../scripts/data.js'
 
-// const bart = [
-//    {
-//       id: 1,
-//       table: 101,
-//       drinks: ["mojito", " beer", " coke"],
-//       food: ["steak", " chicken", " pot stickers"],
-//       occupancy: 4,
-//       needsBooster: false,
-//       bill: 460,
-//       tip: '',
-//       occupied: true
-//    },
-//    {
-//       id: 2,
-//       table: 102,
-//       drinks: ["sprite", " coke zero", " orange juice"],
-//       food: ["bread sticks", " ceasar salad", " chicken tenders", " large lobster"],
-//       occupancy: 3,
-//       needsBooster: true,
-//       bill: 265,
-//       tip: '',
-//       occupied: true
-//    },
-//    {
-//       id: 3,
-//       table: 103,
-//       drinks: ["dirty"],
-//       food: ["dirty"],
-//       occupancy: 0,
-//       needsBooster: false,
-//       bill: 0,
-//       tip: '',
-//       occupied: false
-//    },
-//    {
-//       id: 4,
-//       table: 104,
-//       drinks: ["dirty"],
-//       food: ["dirty"],
-//       occupancy: 0,
-//       needsBooster: false,
-//       bill: 590,
-//       tip: '',
-//       occupied: false
-//    }
-
-// ]
-
 const thomasWaiterPage = () => {
 
    
