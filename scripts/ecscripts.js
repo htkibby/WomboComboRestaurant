@@ -1,42 +1,5 @@
 import  {tableData, waiterData, waiterMatch} from '../scripts/data.js'
 
-// const james = [
-//     {
-//         id: 1,
-//         table: 708,
-//         food: ["Pizza", " Pasta"," Soup", " Hamburger", " Cake"],
-//         drinks: ["Beer", " wine", " water", " coke", " milk"],
-//         occupancy: 5,
-//         needsBooster: true,
-//         occupied: true,
-//         bill: 300,
-//         tip:""
-
-//     },
-//     {
-//         id: 2,
-//         table: 709,
-//         food: ["Cheese plate", " fruit", " tacos"],
-//         drinks: ["water"],
-//         occupancy: 3,
-//         needsBooster: false,
-//         occupied: true,
-//         bill: 125,
-//         tip:""  
-//     },
-//     {
-//         id: 3,
-//         table: 710,
-//         food: ["salad", " burrito", " the special", " steak"],
-//         drinks: ["hot toddy"," mule"," beer"],
-//         occupancy: 0,
-//         needsBooster: true,
-//         occupied: false,
-//         bill: 155,
-//         tip:""
-//     }
-// ]
-
 const ericaWaiterPage = () =>{
     const james = waiterMatch(2)
 
